@@ -1,37 +1,30 @@
-MORSE_CODE = {
+def decode_char(code)
+  morse_dict = {
     '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D', '.' => 'E', '..-.' => 'F',
     '--.' => 'G', '....' => 'H', '..' => 'I', '.---' => 'J', '-.-' => 'K', '.-..' => 'L',
     '--' => 'M', '-.' => 'N', '---' => 'O', '.--.' => 'P', '--.-' => 'Q', '.-.' => 'R',
     '...' => 'S', '-' => 'T', '..-' => 'U', '...-' => 'V', '.--' => 'W', '-..-' => 'X',
     '-.--' => 'Y', '--..' => 'Z', '.----' => '1', '..---' => '2', '...--' => '3', '....-' => '4',
     '.....' => '5', '-....' => '6', '--...' => '7', '---..' => '8', '----.' => '9', '-----' => '0'
-}
-
-def decode_char(morse_code)
-    MORSE_CODE[morse_code]
+  }
+  morse_dict[code]
 end
-
-decode_char('.-')
 
 def decode_word(morse_word)
-    morse_chars = morse_word.split(' ')
-    decode_word =''
-    morse_chars.each do |morse_code|
-        decode_word += decode_char(morse_code)
-    end
-    decode_word
-end
-    
-decode_word('-- -.--') 
-
-def decode(morse_code)
-    morse_words = morse_code.split('   ')
-    decode_message = []
-    morse_words.each do |word|
-        decode_message.push(decode_word(word)) 
-    end
-    decode_message * '   '
+  roman_word = ''
+  morse_word.split.each do |letter|
+    roman_word << decode_char(letter)
+  end
+  roman_word
 end
 
-    decode('-- -.--   -. .- -- .')
-    decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+def decode(text)
+  answer = ''
+  text.split('   ').each do |word|
+    answer << "#{decode_word(word)} "
+  end
+  answer.strip
+end
+
+p decode('-- -.--   -. .- -- .')
+p decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
