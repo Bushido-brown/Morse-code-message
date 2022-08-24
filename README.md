@@ -14,7 +14,7 @@ To access and change the code on your computer (using GIT):
 
 ### Setup
 
-- Open the repository [link](https://github.com/darikmohammed/Ruby-Decode-Morse-message).
+- Open the repository [link](https://github.com//Ruby-Decode-Morse-message).
 - Click on the "Code" button, above the files list.
 - Select one of the three options to copy the URL: HTTPS, SSH key and GitHub CLI.
 - Open the Terminal in the directory you want to copy the project.
