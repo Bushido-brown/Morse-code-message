@@ -40,7 +40,7 @@ To edit this project:
 👤 **Jesse Uzoma**
 
 - GitHub: [@Hedevdup](https://github.com/Hedevedup)
-- Twitter: [@uzoma](https://twitter.com/jesse)
+- Twitter: [@uzoma](https://twitter.com/devtochi)
 - LinkedIn: [@jesseuzoma](https://www.linkedin.com/in/Jesse-uzoma/)
 
 ## 🤝 Contributing
