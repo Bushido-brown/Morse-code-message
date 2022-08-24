@@ -11,7 +11,7 @@ def decode_char(morse_code)
     MORSE_CODE[morse_code]
 end
 
-decode_char(".-")
+decode_char('.-')
 
 def decode_word(morse_word)
     morse_chars = morse_word.split(' ')
@@ -22,7 +22,7 @@ def decode_word(morse_word)
     decode_word
 end
     
-decode_word("-- -.--") 
+decode_word('-- -.--') 
 
 def decode(morse_code)
     morse_words = morse_code.split('   ')
@@ -30,8 +30,8 @@ def decode(morse_code)
     morse_words.each do |word|
         decode_message.push(decode_word(word)) 
     end
-    decode_message * " "
+    decode_message * '   '
 end
 
- decode("-- -.--   -. .- -- .")
- decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+    decode('-- -.--   -. .- -- .')
+    decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
